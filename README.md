@@ -1,20 +1,86 @@
-# AI Bug Triage + Root Cause Analyzer
+# 🪲 AI Bug Triage & Root Cause Analyzer
 
-RAG-based bug triage system using Sentence Transformers, FAISS, and LLM.
+An AI-powered system that analyzes bug reports and recommends **root causes, severity, and fixes** using NLP and similarity search.
 
-## Setup
+---
+
+
+## 💡 Problem Statement
+
+Manual bug triage is time-consuming and error-prone. This project automates:
+
+* Bug classification
+* Root cause identification
+* Fix recommendation
+
+---
+
+## 🧠 How It Works
+
+1. Input bug description
+2. Convert to embeddings (Sentence Transformers)
+3. Retrieve similar bugs (FAISS)
+4. Analyze and generate insights
+5. Display results via Streamlit UI
+
+---
+
+## 🛠 Tech Stack
+
+* Python
+* Sentence Transformers
+* FAISS
+* Streamlit
+
+---
+
+## ⚙️ Features
+
+* Semantic similarity search
+* Root cause prediction
+* Severity & module detection
+* Interactive UI for bug analysis
+
+---
+
+## ▶️ Run Locally
 
 ```bash
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser&#10;venv/Scripts/Activate.ps1&#10;pip install -r requirements.txt
+git clone https://github.com/Ashraff-Shaik/ai-bug-triage-analyzer.git
+cd ai-bug-triage-analyzer
+
+python -m venv venv
+venv\Scripts\activate
+
+pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Usage
+---
 
-1. Enter bug description
-2. Get similar bugs, predicted module, severity, root cause, and fix
+## 📂 Project Structure
 
-## Files
-- `data/bugs.csv`: Training dataset
-- `src/`: Core components
-- `app.py`: Streamlit UI
+```bash
+src/
+  ├── data_loader.py
+  ├── embedding.py
+  ├── vector_store.py
+  ├── retriever.py
+  ├── llm_engine.py
+  ├── triage_system.py
+```
+
+---
+
+## 🚀 Future Improvements
+
+* Integrate LLM (OpenAI / Ollama)
+* Add confidence scoring
+* Deploy as web app
+* Chat-based interface
+
+---
+
+## 🙌 Author
+
+Ashraff Shaik
