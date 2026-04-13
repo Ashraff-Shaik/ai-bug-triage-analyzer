@@ -1,0 +1,11 @@
+bug_id,description,module,severity,root_cause,suggested_fix,similar_bugs
+B1,"Login page crashes when user resets password",Authentication,High,"Possible null pointer in password reset handler","Validate token before processing","BUG_101, BUG_245"
+B2,"Payment timeout error during checkout",Payments,Medium,"API delay handling missing","Add retry logic with exponential backoff",
+B3,"User session expires quickly after login",Authentication,Low,"Session config issue","Increase session timeout to 24 hours",
+B4,"Checkout button not working on mobile",UI,High,"JS event not triggered on touch","Add touch event listeners alongside click",
+B5,"Database connection pool exhausted",Backend,High,"Connection leak in query handler","Implement proper connection cleanup",
+B6,"API rate limit exceeded",Integration,Critical,"Missing rate limiter","Add redis-based rate limiting middleware",
+B7,"File upload fails for large videos",Storage,Medium,"Timeout on upload handler","Increase timeout and add chunked upload",
+B8,"Search results not sorted correctly",Search,Low,"Missing sort parameter","Default to relevance score sorting",
+B9,"Email verification link broken",Authentication,High,"URL encoding issue","Use proper URL encoding for tokens",
+B10,"Dashboard widgets load slowly",UI,Medium,"N+1 query problem","Implement query batching and caching"
